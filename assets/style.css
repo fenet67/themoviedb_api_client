@@ -1,0 +1,154 @@
+* {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+}
+
+header {
+  padding: 5em;
+  h1 {
+    text-align: center;
+  }
+}
+
+#subtitle {
+  padding: 2em 0;
+  text-align: center;
+}
+
+#content-container {
+  padding: 2em 5em;
+}
+
+#movies_list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+
+  button {
+    padding: 1em;
+    border: 1px solid red;
+    background-color: white;
+    border-radius: 1em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.searchContainer {
+  display: inline-flex;
+  padding-right: 1em;
+  position: relative;
+  border: 1px solid red;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.searchBox {
+  border: 0;
+  padding: 0.5rem 1rem;
+  flex: 1;
+  width: 150px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.card {
+  height: 260px;
+  width: 180px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: all 0.6s ease-in-out;
+  background-color: rgba(0, 0, 0, 0);
+  background-blend-mode: darken;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+}
+
+.card:hover div {
+  visibility: visible;
+  opacity: 1;
+  top: 1em;
+}
+
+.card h1 {
+  color: white;
+  font-size: 24px;
+}
+
+.card > div {
+  font-size: 0.6em;
+  position: absolute;
+  top: 27em;
+  left: 1em;
+  color: #999999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s, opacity 1s ease-in-out;
+}
+
+.card > div div {
+  display: flex;
+  gap: 0.5em;
+}
+
+#close_info {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  color: red;
+  font-weight: bolder;
+  font-size: 1em;
+  padding: 0.5em;
+  border: 2px solid red;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+
+#movie_info_container {
+  display: none;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  padding: 2em;
+  max-height: 400px;
+  max-width: 60%;
+  border: 0.1em solid black;
+  border-radius: 2em;
+}
+
+#movie_info {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 2em;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+
+  #movie_info_row_1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

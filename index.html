@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie API Client</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <script src="assets/api.js" defer></script>
+    <script src="assets/index.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>The Movie DB</h1>
+    </header>
+
+    <div class="filterContainer">
+      <form class="searchContainer">
+        <input class="searchBox" name="search" placeholder="Search..." />
+      </form>
+      <button type="button" id="trending_btn">Trending</button>
+      <button type="button" id="popular_btn">Popular</button>
+      <button type="button" id="top_rated_btn">Top Rated</button>
+    </div>
+    <div>
+      <h5 id="subtitle">Showing trending movies</h5>
+    </div>
+
+    <div id="content-container">
+      <main id="movies_list"></main>
+    </div>
+
+    <div
+      id="movie_info_container"
+      style="
+        background-image: url(/assets/backdrop_placeholder.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      "
+    >
+      <span id="close_info">X</span>
+      <div id="movie_info">
+        <div id="movie_info_row_1">
+          <h2 id="movie_info_title">Title (year)</h2>
+          <p id="movie_info_runtime">runtime</p>
+        </div>
+        <p id="movie_info_tagline">"tagline"</p>
+        <p id="movie_info_genre">genre, genre, genre</p>
+        <p id="movie_info_overview">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nostrum,
+          exercitationem odit asperiores cumque harum modi aliquam tempore
+          inventore quibusdam rerum necessitatibus sapiente laboriosam ad
+          pariatur aperiam praesentium. Nesciunt, totam!
+        </p>
+        <p id="movie_info_rating">4.5/10 (4523 votes)</p>
+      </div>
+    </div>
+  </body>
+</html>
